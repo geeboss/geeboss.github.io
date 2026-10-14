@@ -5,7 +5,7 @@
   --bg: #071018;
   --surface: #0f1720;
   --muted: #9aa6af;
-  --text: #e6eef3;
+  --text: #f8fbfc; /* stronger primary text for dark background */
   --card-radius: 12px;
   --container-max: 1100px;
 }
@@ -25,56 +25,69 @@ body{
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  line-height:1.6;
+  line-height:1.65;
+  font-size:16px;
 }
 
-/* Ensure headings are always high-contrast */
+/* Ensure headings are always high-contrast and readable */
 h1,h2,h3,h4,h5,h6{
-  color:var(--text);
+  color:var(--text) !important;
   letter-spacing:0.02em;
+  font-weight:700;
 }
 
-/* Force stronger body text color for commonly used content (overrides template rules) */
+/* Global high-contrast body text overrides */
 #main, #main .post, #main .box, #main p, #main li, #main a, #main td, #main th{
   color:var(--text) !important;
+  opacity:1 !important;
 }
 
-/* Use a slightly muted color for less-important microcopy (but still readable) */
-#main small, #main .muted, #main .note{
-  color:var(--muted) !important;
+/* Make paragraph and list text slightly larger and easier to read */
+#main p, #main li, #main .post .major p, #main .post p, #main .box p{
+  font-size:16px;
+  line-height:1.8;
+  font-weight:400;
+  color:var(--text) !important;
+  opacity:1 !important;
+  text-rendering:optimizeLegibility;
 }
+
+/* Slightly reduce emphasis for microcopy while keeping it readable */
+#main small, #main .muted, #main .note, .post .date, .meta{
+  color:var(--muted) !important;
+  opacity:1 !important;
+}
+
+/* Box and featured backgrounds: increase contrast behind text */
+.post.featured{background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45));padding:1.4rem;border-radius:12px}
+.post.featured .major h2{font-size:1.4rem;color:var(--text)}
+.post.featured .image.main img{border-radius:8px;max-width:100%;height:auto;display:block;}
+
+.box{background:rgba(0,0,0,0.55);padding:1rem;border-radius:var(--card-radius);border-left:4px solid rgba(255,255,255,0.04);margin-bottom:1rem}
+.box h3{margin-top:0;color:var(--text)}
+
+/* Links and accents */
+a{color:var(--accent);font-weight:600}
 
 /* Header tweaks */
 #header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;background:transparent;border-bottom:0}
-#header .logo{color:var(--text);font-weight:600;letter-spacing:0.06em}
+#header .logo{color:var(--text);font-weight:700;letter-spacing:0.06em}
 
 /* Theme toggle button */
-#theme-toggle{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;cursor:pointer}
+#theme-toggle{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.08);padding:6px 10px;border-radius:8px;cursor:pointer}
 #theme-toggle:focus{outline:2px solid rgba(15,118,110,0.25)}
 
 /* Wrapper and main container */
 #wrapper{max-width:var(--container-max);margin:0 auto;padding:2rem}
-#intro{background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.05));padding:3rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+#intro{background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));padding:3rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
 #intro h1{font-size:2.2rem;color:var(--text);margin:0 0 0.5rem}
 #intro p{color:var(--muted)}
 
-/* Featured post */
-.post.featured{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:1.4rem;border-radius:12px}
-.post.featured .major h2{font-size:1.4rem;color:var(--text)}
-.post.featured .image.main img{border-radius:8px;max-width:100%;height:auto;display:block;}
-
-/* Cards */
-.box{background:rgba(255,255,255,0.02);padding:1rem;border-radius:var(--card-radius);border-left:4px solid rgba(255,255,255,0.03);margin-bottom:1rem}
-.box h3{margin-top:0}
-
 /* Buttons */
-.button{border-radius:8px;padding:0.65rem 1rem;font-weight:600}
+.button{border-radius:8px;padding:0.65rem 1rem;font-weight:700}
 .button.primary{background:var(--accent);color:white;border:none}
-.button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+.button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text)}
 .button:hover{transform:translateY(-1px);transition:all .18s ease}
-
-/* Links and accents */
-a{color:var(--accent)}
 
 /* Footer */
 #footer{margin-top:2rem;padding:1rem 0}
@@ -85,16 +98,12 @@ a{color:var(--accent)}
   #wrapper{padding:1rem}
   #intro{padding:2rem}
   #header{padding:0.6rem 1rem}
+  body{font-size:15px}
 }
 
-/* Accessibility/contrast helpers - ensure readable paragraphs and lists */
-#main p, #main li, #main .box, #main .post .major p, #main .post p{
-  opacity:1 !important;
-  color:var(--text) !important;
-}
+/* Accessibility helpers */
+/* Add a subtle text shadow on large headings for extra separation */
+h1, .post.featured .major h2{ text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
 
-/* Slightly reduce emphasis for metadata while keeping readability */
-.post .date, .meta{color:var(--muted) !important;opacity:1}
-
-/* Improve table contrast */
+/* Ensure table content is readable */
 .table-wrapper table td, .table-wrapper table th{color:var(--text) !important}
