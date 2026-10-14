@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --accent: #0F766E;
+  --bg: #071018;
+  --surface: #0f1720;
+  --muted: #9aa6af;
+  --text: #e6eef3;
+  --card-radius: 12px;
+  --container-max: 1100px;
+}
+
+/* Light theme overrides (applied when documentElement has .light) */
+.light{
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --text: #0b1220;
+}
+
+html,body{height:100%;}
+body{
+  background: linear-gradient(180deg,var(--bg) 0%, #071422 100%);
+  color:var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header tweaks */
+#header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;background:transparent;border-bottom:0}
+#header .logo{color:var(--text);font-weight:600;letter-spacing:0.06em}
+
+/* Theme toggle button */
+#theme-toggle{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;cursor:pointer}
+#theme-toggle:focus{outline:2px solid rgba(15,118,110,0.25)}
+
+/* Wrapper and main container */
+#wrapper{max-width:var(--container-max);margin:0 auto;padding:2rem}
+#intro{background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.05));padding:3rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+#intro h1{font-size:2.2rem;color:var(--text);margin:0 0 0.5rem}
+#intro p{color:var(--muted)}
+
+/* Featured post */
+.post.featured{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:1.4rem;border-radius:12px}
+.post.featured .major h2{font-size:1.4rem;color:var(--text)}
+.post.featured .image.main img{border-radius:8px;max-width:100%;height:auto;display:block;}
+
+/* Cards */
+.box{background:rgba(255,255,255,0.02);padding:1rem;border-radius:var(--card-radius);border-left:4px solid rgba(255,255,255,0.03);margin-bottom:1rem}
+.box h3{margin-top:0}
+
+/* Buttons */
+.button{border-radius:8px;padding:0.65rem 1rem;font-weight:600}
+.button.primary{background:var(--accent);color:white;border:none}
+.button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+.button:hover{transform:translateY(-1px);transition:all .18s ease}
+
+/* Links and accents */
+a{color:var(--accent)}
+
+/* Footer */
+#footer{margin-top:2rem;padding:1rem 0}
+#footer .contact .alt p{color:var(--muted)}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  #wrapper{padding:1rem}
+  #intro{padding:2rem}
+  #header{padding:0.6rem 1rem}
+}
