@@ -14,8 +14,8 @@
 .light{
   --bg: #ffffff;
   --surface: #ffffff;
-  --muted: #6b7280;
-  --text: #0b1220;
+  --muted: #6b7280; /* used for less-important text */
+  --text: #0b1220;  /* primary readable text color on light */
 }
 
 html,body{height:100%;}
@@ -25,6 +25,23 @@ body{
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Ensure headings are always high-contrast */
+h1,h2,h3,h4,h5,h6{
+  color:var(--text);
+  letter-spacing:0.02em;
+}
+
+/* Force stronger body text color for commonly used content (overrides template rules) */
+#main, #main .post, #main .box, #main p, #main li, #main a, #main td, #main th{
+  color:var(--text) !important;
+}
+
+/* Use a slightly muted color for less-important microcopy (but still readable) */
+#main small, #main .muted, #main .note{
+  color:var(--muted) !important;
 }
 
 /* Header tweaks */
@@ -69,3 +86,15 @@ a{color:var(--accent)}
   #intro{padding:2rem}
   #header{padding:0.6rem 1rem}
 }
+
+/* Accessibility/contrast helpers - ensure readable paragraphs and lists */
+#main p, #main li, #main .box, #main .post .major p, #main .post p{
+  opacity:1 !important;
+  color:var(--text) !important;
+}
+
+/* Slightly reduce emphasis for metadata while keeping readability */
+.post .date, .meta{color:var(--muted) !important;opacity:1}
+
+/* Improve table contrast */
+.table-wrapper table td, .table-wrapper table th{color:var(--text) !important}
