@@ -7,17 +7,28 @@
     if (theme === 'dark') {
       root.classList.add('dark');
       root.classList.remove('light');
-      if (btn) { btn.textContent = '☀️'; btn.setAttribute('aria-label','Switch to light mode'); btn.setAttribute('aria-pressed','true'); }
+      if (btn) {
+        btn.textContent = '☀️';
+        btn.setAttribute('aria-label', 'Switch to light mode');
+        btn.setAttribute('aria-pressed', 'true');
+      }
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
-      if (btn) { btn.textContent = '🌙'; btn.setAttribute('aria-label','Switch to dark mode'); btn.setAttribute('aria-pressed','false'); }
+      if (btn) {
+        btn.textContent = '🌙';
+        btn.setAttribute('aria-label', 'Switch to dark mode');
+        btn.setAttribute('aria-pressed', 'false');
+      }
     }
   }
 
   function getPreferredTheme() {
-    const stored = localStorage.getItem(THEME_KEY);
-    if (stored) return stored;
+    try {
+      const stored = localStorage.getItem(THEME_KEY);
+      if (stored) return stored;
+    } catch (e) {}
+
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
     return 'light';
   }
@@ -26,7 +37,7 @@
     const isDark = root.classList.contains('dark');
     const newTheme = isDark ? 'light' : 'dark';
     setTheme(newTheme);
-    try { localStorage.setItem(THEME_KEY, newTheme); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(THEME_KEY, newTheme); } catch (e) {}
   }
 
   function init() {
@@ -39,16 +50,17 @@
         e.preventDefault();
         toggleTheme();
       });
-      // allow keyboard
-      btn.addEventListener('keyup', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') toggleTheme();
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleTheme();
+        }
       });
     }
 
-    // react to system changes if user hasn't set a preference
     if (!localStorage.getItem(THEME_KEY) && window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        setTheme(e.matches ? 'dark' : 'light');
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (event) {
+        setTheme(event.matches ? 'dark' : 'light');
       });
     }
   }
