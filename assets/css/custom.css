@@ -18,3 +18,51 @@
 /* Ensure header doesn't permanently cover content when sticky */
 #header { z-index: 1100; }
 #main { position: relative; z-index: 1; }
+
+/* Theme variables and simple light/dark rules used by theme-toggle.js */
+:root {
+  /* default (fallback) theme values */
+  --site-bg: #ffffff;
+  --site-text: #111111;
+  --card-bg: #ffffff;
+  --muted: #666666;
+}
+
+html.light {
+  --site-bg: #ffffff;
+  --site-text: #111111;
+  --card-bg: #ffffff;
+  --muted: #666666;
+}
+
+html.dark {
+  --site-bg: #0b0b0b;
+  --site-text: #e9eef0;
+  --card-bg: #0f1112;
+  --muted: #9aa4a8;
+}
+
+/* Apply theme variables to main elements. These will override values set in main.css because custom.css is loaded after it. */
+body {
+  background-color: var(--site-bg) !important;
+  color: var(--site-text) !important;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Cards and shells */
+.cv-shell,
+.card,
+.box {
+  background-color: var(--card-bg) !important;
+  color: var(--site-text) !important;
+}
+
+a { color: inherit; }
+
+/* Slightly dim secondary text in dark mode */
+.cv-contact, .role, .dates, .degree, p {
+  color: var(--site-text);
+}
+
+/* Make the theme and menu buttons clickable even when overlays are present */
+#theme-toggle, #menu-toggle { position: relative; z-index: 99999; }
