@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">CV Page Demo</title>
+  <desc id="desc">A styled Curriculum Vitae mockup based on the portfolio page design.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef2f4"/>
+      <stop offset="100%" stop-color="#f8f8f8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+
+  <!-- browser chrome mock -->
+  <rect x="0" y="0" width="1200" height="64" fill="#e7ecee"/>
+  <circle cx="24" cy="32" r="8" fill="#ff5f57"/>
+  <circle cx="48" cy="32" r="8" fill="#ffbd2e"/>
+  <circle cx="72" cy="32" r="8" fill="#28c840"/>
+  <rect x="106" y="18" width="430" height="30" rx="15" fill="#edf2f2"/>
+  <text x="128" y="38" font-size="15" font-family="Arial, sans-serif" fill="#5e6d71">geeboss.github.io/generic.html</text>
+
+  <!-- site header -->
+  <rect x="120" y="90" width="960" height="64" rx="10" fill="#f9fafb" stroke="#dfe5e7"/>
+  <text x="150" y="130" font-size="26" font-weight="700" font-family="Arial, sans-serif" fill="#1f2937">Glorious Abolade</text>
+  <rect x="620" y="104" width="62" height="24" rx="8" fill="#0f172a" opacity="0.08"/>
+  <text x="635" y="122" font-size="13" font-family="Arial, sans-serif" fill="#1f2937">Home</text>
+  <text x="705" y="122" font-size="13" font-family="Arial, sans-serif" fill="#1f2937">CV</text>
+  <text x="760" y="122" font-size="13" font-family="Arial, sans-serif" fill="#1f2937">Certificates</text>
+  <circle cx="1010" cy="116" r="15" fill="#ffd166"/>
+  <path d="M1007 116c0-7 6-12 13-12 5 0 9 2 12 6-2-1-5-2-8-2-8 0-13 7-13 14 0 2 0 4 1 5-5-2-9-7-9-11z" fill="#f4b942" opacity="0.7"/>
+
+  <!-- page -->
+  <g filter="url(#shadow)">
+    <rect x="260" y="180" width="680" height="1220" rx="14" fill="#fff" stroke="#d8d8d8"/>
+  </g>
+
+  <!-- cv content -->
+  <text x="600" y="250" text-anchor="middle" font-size="40" font-weight="900" font-family="Arial, sans-serif" fill="#171f2a">ABOLADE BOLUWARIN GLORIOUS</text>
+  <text x="600" y="292" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#2b2b2b">Computer Engineer</text>
+  <text x="600" y="322" text-anchor="middle" font-size="17" font-family="Arial, sans-serif" fill="#2b2b2b">(+234) 703-065-5585, (+234) 815-410-8953</text>
+  <text x="600" y="348" text-anchor="middle" font-size="17" font-family="Arial, sans-serif" fill="#2b2b2b">aboladeglorious@gmail.com | LinkedIn | GitHub</text>
+  <line x1="310" y1="370" x2="890" y2="370" stroke="#444" stroke-width="2"/>
+
+  <!-- section 1 -->
+  <text x="320" y="420" font-size="26" font-weight="900" font-family="Arial, sans-serif" fill="#111">PROFESSIONAL SUMMARY</text>
+  <text x="320" y="450" font-size="16" font-family="Arial, sans-serif" fill="#1f1f1f">
+    <tspan x="320" dy="0">Computer Engineer with robust project management, organisational, and teamwork skills, seeking to leverage</tspan>
+    <tspan x="320" dy="22">my expertise in Computer Engineering, software development, networking, computer hardware systems,</tspan>
+    <tspan x="320" dy="22">and artificial intelligence to contribute to the growth of a forward-thinking organisation.</tspan>
+  </text>
+
+  <!-- section 2 -->
+  <text x="320" y="565" font-size="26" font-weight="900" font-family="Arial, sans-serif" fill="#111">TECHNICAL SKILLS</text>
+  <g font-family="Arial, sans-serif" fill="#222">
+    <text x="320" y="610" font-size="17" font-weight="700">Programming:</text>
+    <text x="500" y="610" font-size="15">Python</text>
+    <circle cx="490" cy="605" r="4" fill="#111"/>
+    <text x="620" y="610" font-size="15">C Programming</text>
+    <circle cx="608" cy="605" r="4" fill="#111"/>
+    <text x="800" y="610" font-size="15">HTML &amp; CSS</text>
+    <circle cx="787" cy="605" r="4" fill="#111"/>
+
+    <text x="320" y="650" font-size="17" font-weight="700">Network &amp; Systems:</text>
+    <text x="520" y="650" font-size="15">Networking &amp; Network Simulation</text>
+    <circle cx="509" cy="645" r="4" fill="#111"/>
+    <text x="820" y="650" font-size="15">Computer Hardware Troubleshooting</text>
+    <circle cx="810" cy="645" r="4" fill="#111"/>
+
+    <text x="320" y="690" font-size="17" font-weight="700">Data &amp; AI:</text>
+    <text x="475" y="690" font-size="15">CNN</text>
+    <circle cx="465" cy="685" r="4" fill="#111"/>
+    <text x="560" y="690" font-size="15">Computer Vision &amp; Image Processing</text>
+    <circle cx="548" cy="685" r="4" fill="#111"/>
+    <text x="860" y="690" font-size="15">OpenCV</text>
+    <circle cx="850" cy="685" r="4" fill="#111"/>
+    <text x="950" y="690" font-size="15">Facenet</text>
+    <circle cx="940" cy="685" r="4" fill="#111"/>
+  </g>
+
+  <!-- section 3 -->
+  <text x="320" y="760" font-size="26" font-weight="900" font-family="Arial, sans-serif" fill="#111">PROFESSIONAL SKILLS</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#222">
+    <circle cx="330" cy="792" r="4" fill="#111"/>
+    <text x="342" y="798">Leadership</text>
+
+    <circle cx="485" cy="792" r="4" fill="#111"/>
+    <text x="497" y="798">Team Collaboration</text>
+
+    <circle cx="700" cy="792" r="4" fill="#111"/>
+    <text x="712" y="798">Customer Service</text>
+
+    <circle cx="875" cy="792" r="4" fill="#111"/>
+    <text x="887" y="798">Time Management</text>
+
+    <circle cx="330" cy="828" r="4" fill="#111"/>
+    <text x="342" y="834">Problem Solving</text>
+
+    <circle cx="520" cy="828" r="4" fill="#111"/>
+    <text x="532" y="834">Vendor Coordination</text>
+
+    <circle cx="745" cy="828" r="4" fill="#111"/>
+    <text x="757" y="834">Stakeholder Management</text>
+
+    <circle cx="960" cy="828" r="4" fill="#111"/>
+    <text x="972" y="834">Project Management</text>
+  </g>
+
+  <!-- section 4 -->
+  <text x="320" y="900" font-size="26" font-weight="900" font-family="Arial, sans-serif" fill="#111">PROFESSIONAL EXPERIENCE</text>
+
+  <g font-family="Arial, sans-serif" fill="#111">
+    <text x="320" y="940" font-size="20" font-weight="700">Bureau of Public Procurement</text>
+    <text x="320" y="970" font-size="18" font-style="italic">Procurement Officer / (NYSC)</text>
+    <text x="320" y="996" font-size="17">Ado-Ekiti | July 2025 - June 2026</text>
+
+    <circle cx="340" cy="1028" r="4" fill="#111"/>
+    <text x="352" y="1034" font-size="16">Raised Certificates of No Objection (CONO) and Certificates of Payments (COP) electronically.</text>
+    <circle cx="340" cy="1060" r="4" fill="#111"/>
+    <text x="352" y="1066" font-size="16">Ensured procurement processes align with state procurement regulations.</text>
+    <circle cx="340" cy="1092" r="4" fill="#111"/>
+    <text x="352" y="1098" font-size="16">Monitored projects to ensure compliance with specifications.</text>
+  </g>
+
+  <!-- bottom footer text -->
+  <text x="320" y="1265" font-size="17" font-family="Arial, sans-serif" fill="#555">© 2026 Glorious Abolade • Built with care</text>
+</svg>
