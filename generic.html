@@ -6,7 +6,160 @@
 		<title>CV — Glorious Abolade</title>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+		<style>
+		  .cv-page {
+		    padding: 2rem 0 3rem;
+		    background: #f4f4f4;
+		  }
+
+		  .cv-shell {
+		    max-width: 980px;
+		    margin: 0 auto;
+		    background: #fff;
+		    border: 1px solid #d9d9d9;
+		    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+		    padding: 2.5rem 2.2rem 3rem;
+		    color: #111;
+		  }
+
+		  .cv-header {
+		    text-align: center;
+		    border-bottom: 2px solid #111;
+		    padding-bottom: 1rem;
+		    margin-bottom: 1.5rem;
+		  }
+
+		  .cv-header h1 {
+		    margin: 0;
+		    font-weight: 900;
+		    font-size: clamp(2rem, 3vw, 3rem);
+		    letter-spacing: 0.04em;
+		    text-transform: uppercase;
+		    line-height: 1.2;
+		  }
+
+		  .cv-title {
+		    margin: 0.4rem 0 0.7rem;
+		    font-size: 1.35rem;
+		    font-style: italic;
+		    font-weight: 500;
+		  }
+
+		  .cv-contact {
+		    font-size: 0.98rem;
+		    margin: 0;
+		    display: flex;
+		    justify-content: center;
+		    flex-wrap: wrap;
+		    gap: 0.5rem;
+		    color: #1b1b1b;
+		  }
+
+		  .cv-contact .sep {
+		    opacity: 0.7;
+		  }
+
+		  .cv-section {
+		    margin-top: 1.8rem;
+		  }
+
+		  .cv-section h2 {
+		    font-size: 1.2rem;
+		    text-transform: uppercase;
+		    letter-spacing: 0.04em;
+		    margin: 0 0 0.8rem;
+		    font-weight: 900;
+		  }
+
+		  .cv-section p,
+		  .cv-section li {
+		    font-size: 1rem;
+		    line-height: 1.6;
+		  }
+
+		  .skill-block {
+		    display: grid;
+		    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		    gap: 1rem 1.5rem;
+		  }
+
+		  .skill-group h3 {
+		    margin: 0 0 0.45rem;
+		    font-size: 1rem;
+		    font-weight: 800;
+		    text-transform: none;
+		  }
+
+		  .skill-group ul,
+		  .simple-list,
+		  .bullets-grid {
+		    margin: 0;
+		    padding-left: 1.2rem;
+		  }
+
+		  .bullets-grid {
+		    display: grid;
+		    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		    gap: 0.35rem 1.5rem;
+		    list-style: disc;
+		    padding-left: 1.3rem;
+		  }
+
+		  .experience-item,
+		  .project-item,
+		  .education-item,
+		  .award-item {
+		    margin-top: 1rem;
+		  }
+
+		  .experience-item h3,
+		  .project-item h3,
+		  .award-item h3 {
+		    margin: 0 0 0.2rem;
+		    font-size: 1.08rem;
+		    font-weight: 900;
+		  }
+
+		  .role,
+		  .dates,
+		  .degree {
+		    margin: 0.1rem 0 0.4rem;
+		    font-size: 0.98rem;
+		    color: #222;
+		  }
+
+		  .gpa {
+		    font-weight: 600;
+		  }
+
+		  ul {
+		    margin: 0.6rem 0 0 1.2rem;
+		    padding: 0;
+		  }
+
+		  li {
+		    margin-bottom: 0.35rem;
+		  }
+
+		  .simple-list {
+		    list-style: disc;
+		  }
+
+		  @media (max-width: 640px) {
+		    .cv-shell {
+		      padding: 1.4rem 1rem 2rem;
+		    }
+
+		    .cv-contact {
+		      font-size: 0.9rem;
+		    }
+
+		    .cv-section h2 {
+		      font-size: 1.1rem;
+		    }
+		  }
+		</style>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -24,6 +177,222 @@
 			</nav>
 
 			<main id="main">
+			  <section class="cv-page">
+			    <div class="cv-shell">
+			      <header class="cv-header">
+			        <h1>ABOLADE BOLUWARIN GLORIOUS</h1>
+			        <p class="cv-title">Computer Engineer</p>
+			        <p class="cv-contact">
+			          (+234) 703-065-5585, (+234) 815-410-8953
+			          <span class="sep">|</span>
+			          aboladeglorious@gmail.com
+			          <span class="sep">|</span>
+			          <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+			          <span class="sep">|</span>
+			          <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+			        </p>
+			      </header>
+
+			      <section class="cv-section">
+			        <h2>PROFESSIONAL SUMMARY</h2>
+			        <p>
+			          Computer Engineer with robust project management, organisational, and teamwork skills,
+			          seeking to leverage my expertise in Computer Engineering, software development,
+			          networking, computer hardware systems, and artificial intelligence to contribute to
+			          the growth of a forward-thinking organisation. I am committed to delivering innovative
+			          solutions, exceeding goals, and fostering collaboration in a diverse work environment.
+			          Experienced in supporting government procurement processes, monitoring project compliance,
+			          developing machine learning solutions, maintaining enterprise IT infrastructure, and leading
+			          multidisciplinary teams. I possess strong analytical, problem solving, communication,
+			          and stakeholder management skills with a commitment to innovation, continuous learning,
+			          and operational excellence.
+			        </p>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>TECHNICAL SKILLS</h2>
+
+			        <div class="skill-block">
+			          <div class="skill-group">
+			            <h3>Programming:</h3>
+			            <ul>
+			              <li>Python</li>
+			              <li>C Programming</li>
+			              <li>HTML &amp; CSS</li>
+			            </ul>
+			          </div>
+
+			          <div class="skill-group">
+			            <h3>Network &amp; Systems:</h3>
+			            <ul>
+			              <li>Networking &amp; Network Simulation</li>
+			              <li>Computer Hardware Troubleshooting</li>
+			            </ul>
+			          </div>
+
+			          <div class="skill-group">
+			            <h3>Data &amp; AI:</h3>
+			            <ul>
+			              <li>CNN</li>
+			              <li>Computer Vision &amp; Image Processing</li>
+			              <li>OpenCV</li>
+			              <li>Facenet</li>
+			            </ul>
+			          </div>
+
+			          <div class="skill-group">
+			            <h3>Software &amp; Tools:</h3>
+			            <ul>
+			              <li>Microsoft Office Suite</li>
+			              <li>Google Workspace</li>
+			              <li>Git/GitHub</li>
+			              <li>VS Code</li>
+			            </ul>
+			          </div>
+			        </div>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>PROFESSIONAL SKILLS</h2>
+			        <ul class="bullets-grid">
+			          <li>Leadership</li>
+			          <li>Team Collaboration</li>
+			          <li>Customer Service</li>
+			          <li>Time Management</li>
+			          <li>Problem Solving</li>
+			          <li>Vendor Coordination</li>
+			          <li>Stakeholder Management</li>
+			          <li>Project Management</li>
+			        </ul>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>PROFESSIONAL EXPERIENCE</h2>
+
+			        <div class="experience-item">
+			          <h3>Bureau of Public Procurement</h3>
+			          <p class="role">Procurement Officer / (NYSC)</p>
+			          <p class="dates">Ado-Ekiti | July 2025 - June 2026</p>
+			          <ul>
+			            <li>Raised Certificates of No Objection (CONO) and Certificates of Payments (COP) electronically.</li>
+			            <li>Ensured procurement processes align with state procurement regulations.</li>
+			            <li>Monitored projects to ensure compliance with specifications.</li>
+			            <li>Verified contractor and supplier quotations to mitigate price inflation.</li>
+			            <li>Submitted procurement plans for Ministry, Departments &amp; Agencies.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>Bolu-Three-Brothers Nigeria Limited</h3>
+			          <p class="role">Procurement &amp; Sales Manager</p>
+			          <p class="dates">Lokoja | December 2019 - January 2024</p>
+			          <ul>
+			            <li>Purchased construction materials through direct purchase and suppliers.</li>
+			            <li>Coordinated site logistics with the project manager to ensure materials arrive on-site exactly when needed.</li>
+			            <li>Supervised the daily morning and evening stock count to track sales volume, prevent inventory loss, and ensure full stock for customer purchase.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>Wonder Tech</h3>
+			          <p class="role">Computer Repair &amp; Service Specialist</p>
+			          <p class="dates">Lokoja | March 2021 - November 2021</p>
+			          <ul>
+			            <li>Diagnosed, repaired, and maintained computer hardware, software, and network systems to keep client technology functioning optimally.</li>
+			          </ul>
+			        </div>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>PROJECTS</h2>
+
+			        <div class="project-item">
+			          <h3>Image-Assisted Biometric Identification Model Using Convolutional Neural Network (CNN) | 2024 | Hugging Face</h3>
+			          <ul>
+			            <li>Developed a machine learning model that processes digital images to automatically identify, classify, and analyze specific target objects using Python.</li>
+			            <li>The captured and stored images are processed using Retina Face to detect and align the faces, both images are passed through the facenet model to generate embeddings.</li>
+			            <li>The cosine similarity between the embeddings is calculated to determine an image match (ranges from -1 to 1).</li>
+			            <li>The model was tested with a dataset of student images correctly matching students with their stored images.</li>
+			            <li>The biometric identification is applicable in any system such as IT firms, CBT centers, Banks etc.</li>
+			          </ul>
+			        </div>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>EDUCATION</h2>
+
+			        <div class="education-item">
+			          <h3>Federal University of Technology, Akure</h3>
+			          <p class="degree">
+			            Bachelor of Engineering in Computer Engineering | January 2019 - November 2024
+			            <span class="gpa">| CGPA: 3.80/5.00</span>
+			          </p>
+			        </div>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>LEADERSHIP &amp; VOLUNTEERING</h2>
+
+			        <div class="experience-item">
+			          <h3>Assistant Farm Manager (Team Lead)</h3>
+			          <p class="role">Karis Farm | Akure | 2025</p>
+			          <ul>
+			            <li>Coordinated daily farm operations and led a team of IT students to improve operational efficiency and productivity.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>Administrative Assistant (Volunteer)</h3>
+			          <p class="role">Funke-Felix Adejumo Foundation | Akure | 2025</p>
+			          <ul>
+			            <li>Supported logistics, documentation, and administrative planning for community development initiatives.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>System Administrator (Industrial Training)</h3>
+			          <p class="role">Afe Babalola University Ado-Ekiti (ABUAD) | 2023</p>
+			          <ul>
+			            <li>Maintained university servers, configured network infrastructure, and resolved system-related issues.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>Engineering Trainee (SWEP)</h3>
+			          <p class="role">Federal University of Technology Akure | 2021</p>
+			          <ul>
+			            <li>Completed practical rotations across engineering workshops, gaining hands-on experience with industrial equipment and multidisciplinary engineering processes.</li>
+			          </ul>
+			        </div>
+
+			        <div class="experience-item">
+			          <h3>Presiding Officer</h3>
+			          <p class="role">Independent National Electoral Commission (INEC) | Ekiti | 2026</p>
+			          <ul>
+			            <li>Supervised polling unit operations and coordinated APO I &amp; APO II officials during elections.</li>
+			            <li>Ensured compliance with INEC electoral procedures, safeguarded election materials, and maintained transparency throughout voting and result collation.</li>
+			          </ul>
+			        </div>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>PROFESSIONAL MEMBERSHIPS</h2>
+			        <ul class="simple-list">
+			          <li>Graduate, Nigerian Society of Engineers (NSE), Membership No: SN032758 | 2026</li>
+			          <li>Member, International Association of Engineers (IAENG), Membership No: 355489 | 2023</li>
+			          <li>Recipient, Global Excellence Award, ABUAD-TWU International Conference | 2023</li>
+			        </ul>
+			      </section>
+
+			      <section class="cv-section">
+			        <h2>AWARDS</h2>
+			        <div class="award-item">
+			          <h3>Global Excellence Award</h3>
+			          <p>ABUAD-TWU International Conference | 2023</p>
+			        </div>
+			      </section>
+			    </div>
+			  </section>
 				<section class="card cv-grid">
 					<div class="cv-main">
 						<h1>Curriculum Vitae</h1>
