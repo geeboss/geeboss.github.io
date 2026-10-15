@@ -158,18 +158,100 @@
 		    list-style: disc;
 		  }
 
+		  /* --- Mobile header/nav fix --- */
+		  #header {
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    gap: 0.75rem;
+		  }
+
+		  #header .logo {
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    max-width: 60%;
+		  }
+
+		  #nav {
+		    position: relative;
+		  }
+
+		  #nav .links {
+		    display: flex;
+		    align-items: center;
+		    gap: 0.8rem;
+		    list-style: none;
+		    margin: 0;
+		    padding: 0;
+		  }
+
+		  #menu-toggle {
+		    display: none;
+		    border: 1px solid rgba(17,17,17,0.2);
+		    background: transparent;
+		    color: #111;
+		    border-radius: 4px;
+		    padding: 0.35rem 0.6rem;
+		    font-size: 1rem;
+		    cursor: pointer;
+		  }
+
+		  @media (max-width: 720px) {
+		    #header {
+		      gap: 0.5rem;
+		    }
+
+		    #header .logo {
+		      max-width: 45%;
+		      font-size: 0.95rem;
+		    }
+
+		    #nav .links {
+		      display: none;
+		    }
+
+		    #nav.open .links {
+		      display: flex;
+		      flex-direction: column;
+		      align-items: flex-start;
+		      position: absolute;
+		      top: calc(100% + 0.4rem);
+		      left: 0;
+		      right: 0;
+		      background: #fff;
+		      border: 1px solid #d9d9d9;
+		      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+		      padding: 0.75rem 1rem;
+		      z-index: 60;
+		    }
+
+		    #menu-toggle {
+		      display: inline-flex;
+		      align-items: center;
+		      justify-content: center;
+		    }
+		  }
+
+		  /* --- Responsive improvements --- */
+		  .cv-shell {
+		    width: 100%;
+		    box-sizing: border-box;
+		    padding-left: 1rem;
+		    padding-right: 1rem;
+		  }
+
+		  .cv-shell img { max-width: 100%; height: auto; display: block; }
+
 		  @media (max-width: 640px) {
-		    .cv-shell {
-		      padding: 1.4rem 1rem 2rem;
-		    }
-
-		    .cv-contact {
-		      font-size: 0.9rem;
-		    }
-
-		    .cv-section h2 {
-		      font-size: 1.1rem;
-		    }
+		    .skill-block { grid-template-columns: 1fr !important; }
+		    .bullets-grid { grid-template-columns: 1fr !important; }
+		    .cv-section h2 { font-size: 1rem; }
+		    .cv-header h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+		    .cv-title { font-size: 1.05rem; }
+		    .cv-shell { padding: 1rem; }
+		    .cv-contact { gap: 0.35rem; font-size: 0.9rem; padding: 0 0.2rem; }
+		    .card.cv-grid { display: none !important; }
 		  }
 		</style>
 	</head>
@@ -177,6 +259,7 @@
 		<div id="wrapper">
 			<header id="header">
 				<a href="index.html" class="logo">Glorious Abolade</a>
+				<button id="menu-toggle" aria-label="Open menu" class="button small">☰</button>
 				<button id="theme-toggle" aria-label="Switch theme" class="button small">🌙</button>
 			</header>
 
@@ -224,7 +307,6 @@
 
 			      <section class="cv-section">
 			        <h2>TECHNICAL SKILLS</h2>
-
 			        <div class="skill-block">
 			          <div class="skill-group">
 			            <h3>Programming:</h3>
@@ -415,6 +497,23 @@
 			</footer>
 		</div>
 
+		<script>
+		  document.addEventListener('DOMContentLoaded', function () {
+		    const menuToggle = document.getElementById('menu-toggle');
+		    const nav = document.getElementById('nav');
+		    if (menuToggle && nav) {
+		      menuToggle.addEventListener('click', function (event) {
+		        event.stopPropagation();
+		        nav.classList.toggle('open');
+		      });
+		      document.addEventListener('click', function (event) {
+		        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+		          nav.classList.remove('open');
+		        }
+		      });
+		    }
+		  });
+		</script>
 		<script src="assets/js/theme-toggle.js"></script>
 	</body>
 </html>
