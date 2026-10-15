@@ -1,77 +1,65 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Boluwarin Glorious Abolade | Portfolio</title>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div id="wrapper">
-			<header id="header">
-				<a href="index.html" class="logo">Glorious Abolade</a>
-				<nav id="nav">
-					<ul class="links">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="generic.html">CV</a></li>
-						<li><a href="elements.html">Certificates</a></li>
-					</ul>
-				</nav>
-				<button id="theme-toggle" aria-label="Switch theme" class="button small">🌙</button>
-			</header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Glorious Abolade — Portfolio</title>
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Glorious Abolade</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="generic.html">CV</a>
+        <a href="elements.html">Certificates</a>
+      </nav>
+      <button id="theme-toggle" aria-pressed="false" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
 
-			<main id="main">
-				<section id="hero" class="featured">
-					<div class="hero-inner">
-						<div class="hero-text">
-							<h1>Glorious Abolade</h1>
-							<p class="lead">Computer Engineer • Software Developer • Certified Data Protection Officer</p>
-							<p class="lead-sub">I build reliable software and practical ML systems, and I help organisations protect personal data through governance and process.</p>
-							<div class="hero-ctas">
-								<a href="generic.html" class="button primary">View full CV</a>
-								<a href="cv/CV_Boluwarin_Glorious_Abolade.pdf" class="button secondary" target="_blank" rel="noreferrer">Download CV (PDF)</a>
-							</div>
-						</div>
-						<div class="hero-image">
-							<img src="images/pic2.jpg" alt="Glorious Abolade" />
-						</div>
-					</div>
-				</section>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Glorious Abolade</h1>
+          <p class="subtitle">Computer Engineer • Software Developer • Certified Data Protection Officer</p>
+          <p class="lead">I build reliable software and practical ML systems, and help organizations protect personal data through governance and process.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="generic.html">View full CV</a>
+            <a class="btn ghost" href="cv/CV_Boluwarin_Glorious_Abolade.pdf" target="_blank" rel="noreferrer">Download CV (PDF)</a>
+          </div>
+        </div>
 
-				<section class="posts">
-					<article class="card">
-						<h2>CV Highlights</h2>
-						<ul>
-							<li><strong>Education:</strong> B.Eng. Computer Engineering — FUTA (2024)</li>
-							<li><strong>Certification:</strong> Certified Data Protection Officer (IIM)</li>
-							<li><strong>Selected project:</strong> Facial Identification Model (CNN)</li>
-							<li><strong>Experience:</strong> Procurement Officer (NYSC), Presiding Officer (INEC), Job Shadowing (Interswitch)</li>
-						</ul>
-						<p class="muted">Want the editable CV? <a href="mailto:geebolu261@gmail.com">Email me</a>.</p>
-					</article>
-					<article class="card">
-						<h2>Projects</h2>
-						<p><strong>Facial Identification Model</strong> — An image identification system using Python and convolutional neural networks for face verification. <a href="https://huggingface.co/spaces/geeboss/face-verification-for-exams/tree/main" target="_blank" rel="noreferrer">Explore</a></p>
-					</article>
-				</section>
-			</main>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="images/pic2.jpg"
+               alt="Portrait"
+               loading="lazy"
+               width="520" height="520"
+               srcset="images/pic2-480.jpg 480w, images/pic2-800.jpg 800w, images/pic2-1200.jpg 1200w">
+        </div>
+      </div>
+    </section>
 
-			<footer id="footer">
-				<div class="contact">
-					<div>
-						<h4>Contact</h4>
-						<p>Email: <a href="mailto:geebolu261@gmail.com">geebolu261@gmail.com</a></p>
-						<p>Phone: <a href="tel:+2348050853065">+234 805 085 3065</a></p>
-					</div>
-					<div>
-						<p>&copy; 2026 Glorious Abolade</p>
-					</div>
-				</div>
-			</footer>
-		</div>
+    <!-- Example sections -->
+    <section class="container about">
+      <h2>About</h2>
+      <p>Short paragraph summarizing background, focus, and what you offer.</p>
+    </section>
 
-		<script src="assets/js/theme-toggle.js"></script>
-	</body>
+    <section class="container projects">
+      <h2>Featured Projects</h2>
+      <!-- project cards -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2026 Glorious Abolade • Built with care</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme-toggle.js"></script>
+</body>
 </html>
